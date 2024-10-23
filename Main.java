@@ -7,7 +7,7 @@ public class Main {
         Random rnd = new Random();
         int [] array = new int [100000];
 
-        // заполнение массива случайными числами до 1000
+        // заполнение массива случайными числами до 100 000
         for (int i = 0; i < array.length; i++){
            array [i] = rnd.nextInt(1000) +1;
         }
