@@ -15,18 +15,21 @@ public class Main {
         // пузырек
         ArrSort.bubbleSort(array);
         System.out.println("Время сортировки алгоритма \"пузырек\": " + ArrSort.bubbleSort(array));
+        
         // че-то сам придумал
         System.out.println("Время сортировки моего алгоритма: " + ArrSort.mySort(array));
+        
         // квик сорт
-
         System.out.println("Время сортировки стандартной функции: " + ArrSort.arrSort(array));
-
+        // поскольку рекурсия замер времени внутри метода не работает. ну по крайней мере у меня ) 
         long start = System.currentTimeMillis();
         ArrSort.quickSort(array,0, array.length -1);
         long end = System.currentTimeMillis();
         System.out.println("Время сортировки QuickSort: " + (end - start));
-       /* System.out.println("");
-        int i =0;
+       
+        /* для печати сгенерированного массива
+       System.out.println("");
+        int i = 0;
         for (int s : array) {
 
             if (i%50 == 0) {
