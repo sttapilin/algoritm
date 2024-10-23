@@ -31,11 +31,8 @@ public class ArrSort {
                         arraysort [j] = arraysort[i];
                         arraysort [i] = min;
                     }
-
                 }
-
           }
-
           long end = System.currentTimeMillis();
         return end - start;
 
@@ -54,12 +51,10 @@ public class ArrSort {
           //границы массива
           if (low >= high)
               return;
-
           // опорный элемент медиана
           int middle = arr[low + (high - low) / 2];
           // деление на подмассивы, больше и меньше медианы
           int i = low, j = high;
-
           while (i <= j) {
               while (arr[i] < middle) {
                   i++;
@@ -75,17 +70,11 @@ public class ArrSort {
                   j--;
               }
           }
-
-
           // вызов рекурсии для сортировки левой и правой части
           if (low < j)
               quickSort(arr, low, j);
-
           if (high > i)
               quickSort(arr, i, high);
-
-
-
       }
 
 // для поверки сортировки можно вставить этот код в любой метод, кроме quick (рекурсия!)
